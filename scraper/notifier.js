@@ -12,11 +12,11 @@ const transporter = nodemailer.createTransport({
 });
 
 /**
- * Envía un correo con la oferta encontrada y el CV adaptado
+ * Envía un correo con la oferta encontrada y el análisis de la IA
  * @param {Object} job La oferta de trabajo (título, link, etc)
- * @param {string} adaptedCV El texto del CV adaptado en Markdown
+ * @param {string} jobAnalysis El texto del análisis de match de la IA
  */
-async function sendAlert(job, adaptedCV) {
+async function sendAlert(job, jobAnalysis) {
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_DESTINATION, // Tu correo donde recibirás la alerta
@@ -45,11 +45,11 @@ async function sendAlert(job, adaptedCV) {
 
                 <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-bottom: 30px;">
                 
-                <h3 style="margin: 0 0 15px 0; font-size: 16px; color: #0f172a; text-transform: uppercase; letter-spacing: 1px;">Curriculum Vitae Adaptado</h3>
-                <p style="margin: 0 0 20px 0; font-size: 14px; color: #64748b;">El siguiente perfil ha sido optimizado con IA para coincidir estrictamente con los requerimientos técnicos de esta posición:</p>
+                <h3 style="margin: 0 0 15px 0; font-size: 16px; color: #0f172a; text-transform: uppercase; letter-spacing: 1px;">Análisis de Inteligencia Artificial</h3>
+                <p style="margin: 0 0 20px 0; font-size: 14px; color: #64748b;">Tu reclutador digital ha evaluado esta vacante contra tu perfil ejecutivo:</p>
                 
-                <div style="background-color: #1e293b; color: #f8fafc; padding: 25px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 1.6; overflow-x: auto; white-space: pre-wrap;">
-${adaptedCV.replace(/```markdown/gi, '').replace(/```/g, '').replace(/\*\*/g, '').replace(/^#+\s/gm, '')}
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; color: #1e293b; padding: 25px; border-radius: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">
+${jobAnalysis.replace(/```markdown/gi, '').replace(/```/g, '').replace(/\*\*/g, '').replace(/^#+\s/gm, '')}
                 </div>
             </div>
             

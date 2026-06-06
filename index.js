@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { searchJobs } = require('./scraper/job_search');
-const { adaptCV } = require('./scraper/cv_adapter');
+const { analyzeJob } = require('./scraper/job_analyzer');
 const { sendAlert } = require('./scraper/notifier');
 
 // Rutas de archivos de datos
@@ -114,11 +114,11 @@ async function runJobHunter() {
             }
 
             try {
-                console.log(`🧠 Adaptando CV para la oferta...`);
-                const adaptedCV = await adaptCV(job.job_description, masterCV);
+                console.log(`🧠 Analizando match con IA...`);
+                const jobAnalysis = await analyzeJob(job.job_description, masterCV);
 
                 console.log(`✉️ Enviando alerta premium...`);
-                await sendAlert(job, adaptedCV);
+                await sendAlert(job, jobAnalysis);
 
                 seenJobs.push(job.job_id);
                 if (!seenJobs.includes(compositeKey)) {
