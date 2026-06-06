@@ -24,7 +24,7 @@ jobs:
 
     - name: Ejecutar Autómata (JobSeeker AI)
       env:
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        OPENAI_API_KEY: ${{ secrets.API_KEY_OPENAI }}
         RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         EMAIL_USER: ${{ secrets.EMAIL_USER }}
         EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
