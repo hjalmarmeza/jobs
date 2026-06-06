@@ -33,7 +33,15 @@ async function searchJobs(query, location) {
 
     try {
         const response = await axios.request(options);
-        return response.data.data; // JSearch returns jobs inside a 'data' array
+        console.log("JSearch Response Metadata:", {
+            status: response.status,
+            request_id: response.data.request_id,
+            data_length: response.data.data ? response.data.data.length : 'undefined'
+        });
+        if (!response.data.data || response.data.data.length === 0) {
+             console.log("Raw Response Data:", JSON.stringify(response.data, null, 2));
+        }
+        return response.data.data || []; // JSearch returns jobs inside a 'data' array
     } catch (error) {
         console.error("Error searching jobs with JSearch:", error);
         return [];
