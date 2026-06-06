@@ -14,16 +14,16 @@ Líder de Operaciones con 18 años de trayectoria en el sector Telecomunicacione
 - **Ecosistema Tech:** Make.com, Firebase, Serverless, OCR / MLLM, Agile Management.
 
 ## Experiencia Profesional & Legado
-- **Gestor de Negocio Familiar & Consultor IA (2021 - Actualidad):** Dirección integral de negocio familiar. Implementación estratégica de herramientas de IA Generativa para rentabilidad y eficiencia de procesos.
-- **Supervisor de Operaciones, Telefónica (2021):** Dirección de 48 gestores de Call Center. Optimización de KPIs críticos elevando productividad mediante coaching.
-- **Supervisor de Control de Calidad, Telefónica (2017 - 2021):** Estabilización de sistemas para migración masiva y exitosa de más de 20 MILLONES de clientes. Testing y mitigación de riesgos.
-- **Supervisor Regional (Norte, Centro y Oriente), Telefónica (2009 - 2017):** Dirección de 52 Centros de Atención gestionando ~160.000 clientes mensuales. Ahorro de 110.000 € liderando proyecto de remodelación integral.
+- **Gestor de Negocio Familiar & Consultor IA (2021 - Actualidad):** Dirección integral de operaciones. Implementación de herramientas de IA Generativa orientadas a la mejora de la eficiencia en procesos operativos.
+- **Supervisor de Operaciones, Telefónica (2021):** Dirección de un equipo de 48 gestores. Orientación hacia la optimización de KPIs de calidad y productividad mediante acompañamiento y coaching.
+- **Supervisor de Control de Calidad, Telefónica (2017 - 2021):** Participación en el proyecto de estabilización de sistemas para la migración de cartera (20M de clientes). Gestión del testing y mitigación de riesgos operativos.
+- **Supervisor Regional (Norte, Centro y Oriente), Telefónica (2009 - 2017):** Dirección operativa de 52 Centros de Atención (160.000 clientes/mes). Ejecución de proyecto de remodelación de infraestructura generando un ahorro documentado de 110K €.
 
 ## Logros Corporativos
-- **Migración Masiva 20M:** Estabilización de sistemas críticos en el hito más grande de Telefónica Perú.
-- **Gestión Senior Multi-Sede:** Dirección de 52 centros de atención a nivel nacional.
-- **Eficiencia de Reducción (15%):** Virtualización exitosa de la atención física a canales digitales.
-- **Ahorro OPEX (110K €):** Optimización mediante remodelación estratégica de infraestructura.
+- **Proyecto de Migración (20M):** Participación en la estabilización de sistemas y mitigación de riesgos durante el proceso de migración de clientes.
+- **Gestión Operativa Multi-Sede:** Dirección y coordinación operativa de 52 centros de atención a nivel nacional.
+- **Eficiencia Operativa (15%):** Contribución en la estrategia de transición de atención física hacia canales digitales.
+- **Ahorro en Infraestructura (110K €):** Optimización de presupuestos mediante la ejecución estratégica de remodelación de instalaciones.
 
 ## Portafolio de Innovación Tecnológica (Desarrollo & IA)
 Desarrollo de una arquitectura de software diversificada con más de 25 proyectos integrales:

@@ -26,11 +26,11 @@ Tu respuesta DEBE estructurarse exactamente así:
 ## ACERCA DE MÍ
 [Adaptar el perfil ejecutivo de 18 años de experiencia, enfatizando habilidades transferibles a la oferta]
 
-## EXPERIENCIA & LEGADO
-[Listar la experiencia real de Telefónica y Emprendimiento, destacando KPIs y logros relevantes para la oferta. NO INVENTAR PUESTOS]
+## Experiencia & Legado
+[Seleccionar y copiar TEXTUALMENTE (palabra por palabra) las experiencias del CV original que aplican a la oferta. NO reescribir, NO exagerar, y NO cambiar el tono profesional.]
 
 ## LOGROS CORPORATIVOS
-[Mantener los 4 logros reales: Migración 20M, Eficiencia 15%, Gestión Senior 52 sedes, Ahorro 110K]
+[Copiar TEXTUALMENTE los logros del CV original sin cambiar la redacción. Solo incluir los que apliquen a la oferta. NO agregar palabras como "el mayor hito" si no están en el original.]
 
 ## COMPETENCIAS & APTITUDES (ÁREAS DE DOMINIO TÉCNICO Y OPERATIVO)
 [Mantener TODAS las categorías de habilidades del CV original (Liderazgo, Transformación & IA, Operaciones, Comercial, CX, Humanas, Ecosistema Tech). Resaltar en negrita las más relevantes para la oferta, pero NO ELIMINAR NINGUNA categoría.]
