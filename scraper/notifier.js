@@ -19,11 +19,25 @@ async function sendDailyDigest(analyzedJobs) {
     if (!analyzedJobs || analyzedJobs.length === 0) return;
 
     let jobsHtml = '';
+    let tableRowsHtml = '';
 
     analyzedJobs.forEach((item, index) => {
         const job = item.job;
         const analysis = item.analysis;
         const cleanAnalysis = analysis.replace(/```markdown/gi, '').replace(/```/g, '').replace(/\*\*/g, '').replace(/^#+\s/gm, '');
+
+        // Extraer el porcentaje de match con Regex
+        const matchRegex = /NIVEL DE MATCH:\s*(\d+%?)/i;
+        const matchResult = cleanAnalysis.match(matchRegex);
+        const matchPercentage = matchResult ? matchResult[1] : 'N/A';
+
+        // Agregar fila a la tabla resumen
+        tableRowsHtml += `
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 12px; color: #1e293b; font-size: 14px;"><strong>${job.job_title}</strong><br><span style="color: #64748b; font-size: 12px;">${job.employer_name}</span></td>
+                <td style="padding: 12px; text-align: center; color: #3b82f6; font-weight: bold; font-size: 14px;">${matchPercentage}</td>
+            </tr>
+        `;
 
         jobsHtml += `
             <div style="margin-bottom: 40px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
@@ -46,6 +60,24 @@ ${cleanAnalysis}
         `;
     });
 
+    const summaryTableHtml = `
+        <div style="margin-bottom: 40px;">
+            <h3 style="margin: 0 0 15px 0; font-size: 18px; color: #0f172a; text-align: center; letter-spacing: 0.5px;">TABLA RESUMEN DE MATCHING</h3>
+            <table style="width: 100%; border-collapse: collapse; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <thead>
+                    <tr style="background-color: #f1f5f9; text-align: left;">
+                        <th style="padding: 12px; font-size: 13px; color: #64748b; text-transform: uppercase;">Puesto & Empresa</th>
+                        <th style="padding: 12px; font-size: 13px; color: #64748b; text-transform: uppercase; text-align: center;">Nivel de Match</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${tableRowsHtml}
+                </tbody>
+            </table>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-bottom: 30px;">
+    `;
+
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_DESTINATION,
@@ -60,6 +92,7 @@ ${cleanAnalysis}
             
             <!-- Body -->
             <div style="padding: 40px 30px;">
+                ${summaryTableHtml}
                 ${jobsHtml}
             </div>
             
