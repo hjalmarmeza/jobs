@@ -25,9 +25,9 @@ const SEARCH_QUERIES = [
 ];
 
 const LOCATIONS = [
-    "Salamanca, Spain", // Restringido solo a la localidad (nada de toda Castilla y León para evitar viajes > 10 mins)
-    "Remote Spain",
-    "Madrid, Spain" // TEMPORAL: Para forzar una prueba exitosa y demostrar que el correo funciona
+    "Salamanca, España", // Restringido solo a la localidad
+    "Remoto España",
+    "Madrid, España" // TEMPORAL: Para forzar una prueba exitosa
 ];
 
 // Función para cargar los trabajos ya vistos
@@ -62,8 +62,8 @@ async function runJobHunter() {
     // (En producción real, se pueden unificar o espaciar para no golpear el rate limit)
     // Para simplificar, tomaremos un query representativo combinado o iteraremos.
     
-    // Unificamos queries para JSearch de forma más amplia y simple.
-    const queryStr = 'Operations Manager';
+    // Unificamos queries para JSearch de forma más amplia y simple en español.
+    const queryStr = 'Operaciones';
 
     for (const location of LOCATIONS) {
         console.log(`🔍 Buscando en: ${location}...`);
