@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { searchJobs } = require('./scraper/job_search');
 const { analyzeJob } = require('./scraper/job_analyzer');
-const { sendAlert } = require('./scraper/notifier');
+const { sendDailyDigest } = require('./scraper/notifier');
 
 // Rutas de archivos de datos
 const SEEN_JOBS_FILE = path.join(__dirname, 'data', 'seen_jobs.json');
@@ -57,6 +57,9 @@ async function runJobHunter() {
     const seenJobs = loadSeenJobs();
     const masterCV = loadMasterCV();
     let newJobsFound = 0;
+    
+    // Aquí guardaremos todas las ofertas válidas junto con su análisis individual
+    let dailyDigestJobs = [];
 
     // Buscamos con términos más amplios en la API para no perder sinónimos
     const queryStr = 'Operaciones OR Operations OR Customer Success';
@@ -115,10 +118,14 @@ async function runJobHunter() {
 
             try {
                 console.log(`🧠 Analizando match con IA...`);
+                // Análisis INDIVIDUAL para este puesto específico
                 const jobAnalysis = await analyzeJob(job.job_description, masterCV);
 
-                console.log(`✉️ Enviando alerta premium...`);
-                await sendAlert(job, jobAnalysis);
+                // Guardamos el trabajo y su análisis en la bolsa del día
+                dailyDigestJobs.push({
+                    job: job,
+                    analysis: jobAnalysis
+                });
 
                 seenJobs.push(job.job_id);
                 if (!seenJobs.includes(compositeKey)) {
@@ -126,9 +133,11 @@ async function runJobHunter() {
                 }
                 newJobsFound++;
 
-                // MODO PRUEBA: Freno de emergencia
-                console.log(`🛑 Prueba controlada: Se encontró 1 oferta exitosamente. Deteniendo el autómata.`);
-                break;
+                // MODO PRUEBA: Freno de emergencia ajustado a 2 ofertas para probar el Digest
+                if (newJobsFound >= 2) {
+                    console.log(`🛑 Prueba controlada: Se encontraron 2 ofertas exitosamente. Deteniendo la búsqueda.`);
+                    break;
+                }
             } catch (error) {
                 console.error(`❌ Error procesando la oferta ${job.job_title}:`, error.message);
             }
@@ -136,11 +145,19 @@ async function runJobHunter() {
             await new Promise(r => setTimeout(r, 2000));
         }
         
-        if (newJobsFound >= 1) break; // MODO PRUEBA
+        if (newJobsFound >= 2) break; // MODO PRUEBA
     }
 
     saveSeenJobs(seenJobs);
     console.log(`🏁 Búsqueda terminada. Ofertas nuevas procesadas: ${newJobsFound}`);
+
+    // Si encontramos ofertas hoy, enviamos 1 SOLO correo consolidado
+    if (dailyDigestJobs.length > 0) {
+        console.log(`✉️ Enviando Daily Digest con ${dailyDigestJobs.length} ofertas...`);
+        await sendDailyDigest(dailyDigestJobs);
+    } else {
+        console.log(`😴 No se encontraron ofertas relevantes hoy. No se enviará correo.`);
+    }
 }
 
 // Ejecutar si se llama directamente
