@@ -22,8 +22,8 @@ Líder de Operaciones con 18 años de trayectoria en el sector Telecomunicacione
 - **Supervisor de Control de Calidad, Telefónica (2017 - 2021):** Participación en el proyecto de estabilización de sistemas para la migración de cartera (20M de clientes). Gestión del testing y mitigación de riesgos operativos.
   - *Herramientas:* SAP, Excel Avanzado (Modelado y Reportes), Bases de Datos.
 - **Supervisor Regional (Norte, Centro y Oriente), Telefónica (2009 - 2017):** Dirección operativa de 52 Centros de Atención (160.000 clientes/mes). Ejecución de proyecto de remodelación de infraestructura generando un ahorro documentado de 110K €.
-  - *Métricas de Retail y Sucursales:* Tráfico de Tienda (Footfall), Tasa de Convertibilidad, Venta Cruzada, TMO, TME, Tasa de Abandono.
-  - *Entorno Tecnológico:* Qmatic, Bmatic (Flujo de Clientes), Amdocs, SAP.
+  - *Métricas de Retail y Sucursales:* Tráfico de Tienda (Footfall), Tasa de Convertibilidad, Venta Cruzada, TMO, TME, Tasa de Abandono, ARPU.
+  - *Entorno Tecnológico:* Qmatic, Bmatic (Flujo de Clientes), Amdocs, SAP, Microsoft Teams.
 
 ## Logros Corporativos
 - **Proyecto de Migración (20M):** Participación en la estabilización de sistemas y mitigación de riesgos durante el proceso de migración de clientes.
