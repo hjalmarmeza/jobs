@@ -57,8 +57,8 @@ async function runJobHunter() {
     const masterCV = loadMasterCV();
     let newJobsFound = 0;
 
-    // Buscamos roles exclusivamente directivos/gerenciales para evitar puestos técnicos
-    const queryStr = 'Director de Operaciones OR Operations Manager OR Customer Success';
+    // Buscamos con términos más amplios en la API para no perder sinónimos
+    const queryStr = 'Operaciones OR Operations OR Customer Success';
 
     for (const location of LOCATIONS) {
         console.log(`🔍 Buscando en: ${location}...`);
@@ -91,7 +91,7 @@ async function runJobHunter() {
             
             // 1. Debe ser un rol de liderazgo o estar en los sectores clave
             const executiveKeywords = [
-                "operations manager", "director", "head of", "customer success",
+                "operations manager", "director", "head of", "customer success", "gerente", "jefe", "líder", "leader", "manager",
                 "service delivery", "digital transformation", "transformación digital",
                 "saas", "retail", "telecomunicaciones", "telco", "bpo", "tecnología", "cx"
             ];
