@@ -26,9 +26,9 @@ jobs:
       env:
         OPENAI_API_KEY: ${{ secrets.API_KEY_OPENAI }}
         RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_USER: "Hjalmar.meza@gmail.com"
         EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-        EMAIL_DESTINATION: ${{ secrets.EMAIL_DESTINATION }}
+        EMAIL_DESTINATION: "Hjalmar.meza@gmail.com"
       run: node index.js
 
     - name: Guardar Memoria (seen_jobs.json)
