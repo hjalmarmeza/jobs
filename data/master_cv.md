@@ -54,6 +54,7 @@ Desarrollo de una arquitectura de software diversificada con más de 25 proyecto
 - **Gestión Ágil de Proyectos:** Trello.
 
 ## KPIs & MÉTRICAS DE NEGOCIO DOMINADAS
-- **Calidad y Experiencia de Cliente (CX):** IRP (Índice de Resolución de Problemas / First Contact Resolution), NPS (Net Promoter Score), CSAT (Customer Satisfaction).
-- **Desempeño Comercial y Retail:** Tasa de Convertibilidad (Conversión de tráfico a ventas), Venta Cruzada (Cross-Selling), Venta Adicional (Up-Selling), Ticket Promedio.
-- **Eficiencia Operativa:** Productividad por Asesor/Tienda, Optimización de Tiempos de Espera (SLA), Tasa de Retención de Clientes (Churn Rate).
+- **Calidad y Experiencia de Cliente (CX):** IRP (Resolución de Problemas), NPS (Net Promoter Score), TMO (Tiempo Medio de Operación), TME (Tiempo Medio de Espera), Tasa de Abandono en sucursales.
+- **Desempeño Comercial (Retail):** Cumplimiento de Cuota (Forecast / Target de Ventas), Tráfico de Tienda (Footfall), Tasa de Convertibilidad, Venta Cruzada (Cross-Selling).
+- **Retención y Rentabilidad (Core Telco):** Churn Rate (Control de bajas/cancelaciones), ARPU (Ingreso Promedio por Usuario), Retención Proactiva y Reactiva.
+- **Eficiencia Operativa:** Productividad por Asesor/Tienda, Optimización de SLA y tiempos de atención.
