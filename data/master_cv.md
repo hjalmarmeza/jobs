@@ -43,3 +43,10 @@ Desarrollo de una arquitectura de software diversificada con más de 25 proyecto
 - **Top Certificaciones en IA:** IA Generativa (Microsoft/LinkedIn), Productividad IA, Azure AI Studio.
 - **Certificaciones Directivas:** Liderazgo en la Era Digital (Tec. de Monterrey), CX Strategy, Experto RGPD (UE), Agile & Design Thinking.
 - **Coaching & Logro:** Coaching Directivo (CENTRUM PUCP), Gestión del Logro.
+
+## STACK TECNOLÓGICO OPERATIVO (HERRAMIENTAS CLAVE)
+- **Gestión Corporativa & ERP:** SAP (Módulo de Operaciones).
+- **Análisis de Datos & KPIs:** Microsoft Excel Avanzado (Dashboards y Reportes), Modelado de Bases de Datos.
+- **Productividad & Ecosistema Cloud:** Google Workspace (Drive, Sheets), Microsoft Teams.
+- **Comunicación Directiva:** Microsoft PowerPoint (Presentaciones Ejecutivas y de Alto Impacto).
+- **Gestión Ágil de Proyectos:** Trello.
