@@ -26,8 +26,7 @@ const SEARCH_QUERIES = [
 
 const LOCATIONS = [
     "Salamanca, España", 
-    "Remoto España",
-    "Madrid, España" // MODO PRUEBA
+    "Remoto España"
 ];
 
 // Función para cargar los trabajos ya vistos
@@ -133,19 +132,12 @@ async function runJobHunter() {
                 }
                 newJobsFound++;
 
-                // MODO PRUEBA: Freno de emergencia ajustado a 2 ofertas para probar el Digest
-                if (newJobsFound >= 2) {
-                    console.log(`🛑 Prueba controlada: Se encontraron 2 ofertas exitosamente. Deteniendo la búsqueda.`);
-                    break;
-                }
             } catch (error) {
                 console.error(`❌ Error procesando la oferta ${job.job_title}:`, error.message);
             }
 
             await new Promise(r => setTimeout(r, 2000));
         }
-        
-        if (newJobsFound >= 2) break; // MODO PRUEBA
     }
 
     saveSeenJobs(seenJobs);
