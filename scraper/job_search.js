@@ -23,7 +23,7 @@ async function searchJobs(query, location) {
             query: `${query} in ${location}`,
             page: '1',
             num_pages: '1', // Start with 1 page to save API quota
-            date_posted: 'all', // Traemos todas las fechas posibles para la prueba
+            date_posted: 'month', // Buscamos vacantes del último mes (filtro local descartará > 10 días)
             country: 'es' // MUY IMPORTANTE: Forzar la búsqueda en España
         },
         headers: {

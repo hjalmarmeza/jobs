@@ -25,9 +25,8 @@ const SEARCH_QUERIES = [
 ];
 
 const LOCATIONS = [
-    "Salamanca, España", // Restringido solo a la localidad
-    "Remoto España",
-    "Madrid, España" // TEMPORAL: Para forzar una prueba exitosa
+    "Salamanca, España", 
+    "Remoto España"
 ];
 
 // Función para cargar los trabajos ya vistos
@@ -58,12 +57,8 @@ async function runJobHunter() {
     const masterCV = loadMasterCV();
     let newJobsFound = 0;
 
-    // Buscamos iterando sobre los queries y locaciones
-    // (En producción real, se pueden unificar o espaciar para no golpear el rate limit)
-    // Para simplificar, tomaremos un query representativo combinado o iteraremos.
-    
-    // Unificamos queries para JSearch de forma más amplia y simple en español.
-    const queryStr = 'Operaciones';
+    // Buscamos roles exclusivamente directivos/gerenciales para evitar puestos técnicos
+    const queryStr = 'Director de Operaciones OR Operations Manager OR Customer Success';
 
     for (const location of LOCATIONS) {
         console.log(`🔍 Buscando en: ${location}...`);
@@ -71,17 +66,14 @@ async function runJobHunter() {
         console.log(`Encontrados ${jobs.length} trabajos crudos en la API.`);
         
         for (const job of jobs) {
-            // Generar una llave compuesta para evitar duplicados multi-plataforma (ej. misma oferta en LinkedIn e InfoJobs)
             const employerNorm = (job.employer_name || "unknown").toLowerCase().trim();
             const titleNorm = (job.job_title || "unknown").toLowerCase().trim();
             const compositeKey = `${employerNorm}_${titleNorm}`;
 
-            // Evitar duplicados (Garantía absoluta, ya sea por ID o por Empresa+Título)
             if (seenJobs.includes(job.job_id) || seenJobs.includes(compositeKey)) {
                 continue;
             }
 
-            // Filtro de Antigüedad (Máximo 10 días)
             const jobPostedAt = new Date(job.job_posted_at_datetime_utc || job.job_posted_at_timestamp * 1000 || Date.now());
             const daysOld = (Date.now() - jobPostedAt.getTime()) / (1000 * 3600 * 24);
             if (daysOld > 10) {
@@ -93,53 +85,51 @@ async function runJobHunter() {
 
             console.log(`✨ Nueva oferta encontrada: ${job.job_title} en ${job.employer_name}`);
             
-            // ESCUDO DE COSTOS (Pre-filtro)
-            // Solo usamos la IA si la descripción menciona responsabilidad de alto nivel
+            // ESCUDO EJECUTIVO Y DE SECTOR
             const jobDescription = (job.job_description || "").toLowerCase();
-            const relevantKeywords = [
-                "operations manager", "head of operations", "service delivery", "customer success",
-                "operational excellence", "digital transformation", "kpi", "sla", "mejora continua",
-                "process improvement", "director de operaciones", "bpo", "saas", "telecomunicaciones"
+            const title = job.job_title.toLowerCase();
+            
+            // 1. Debe ser un rol de liderazgo o estar en los sectores clave
+            const executiveKeywords = [
+                "operations manager", "director", "head of", "customer success",
+                "service delivery", "digital transformation", "transformación digital",
+                "saas", "retail", "telecomunicaciones", "telco", "bpo", "tecnología", "cx"
             ];
-            const isRelevant = relevantKeywords.some(kw => jobDescription.includes(kw)) || relevantKeywords.some(kw => job.job_title.toLowerCase().includes(kw));
+            
+            // 2. Filtro estricto para IGNORAR puestos técnicos, logística pesada o almacén
+            const forbiddenKeywords = [
+                "técnico", "tecnico", "conductor", "almacén", "almacen", "repartidor", 
+                "paquetería", "paletería", "carretillero", "operario"
+            ];
 
-            if (!isRelevant) {
-                console.log(`⏩ Saltando oferta (no superó el pre-filtro de relevancia, ahorrando tokens de IA).`);
+            const isExecutive = executiveKeywords.some(kw => jobDescription.includes(kw) || title.includes(kw));
+            const isForbidden = forbiddenKeywords.some(kw => title.includes(kw));
+
+            if (!isExecutive || isForbidden) {
+                console.log(`⏩ Saltando oferta (no superó el escudo ejecutivo o pertenece a logística básica).`);
                 seenJobs.push(job.job_id); 
                 if (!seenJobs.includes(compositeKey)) seenJobs.push(compositeKey);
                 continue;
             }
 
             try {
-                // Adaptar CV (Aquí sí gastamos tokens porque vale la pena)
                 console.log(`🧠 Adaptando CV para la oferta...`);
                 const adaptedCV = await adaptCV(job.job_description, masterCV);
 
-                // Enviar Alerta
                 console.log(`✉️ Enviando alerta premium...`);
                 await sendAlert(job, adaptedCV);
 
-                // Marcar como visto usando ambos identificadores
                 seenJobs.push(job.job_id);
                 if (!seenJobs.includes(compositeKey)) {
                     seenJobs.push(compositeKey);
                 }
                 newJobsFound++;
-
-                // LÍMITE DE PRUEBA CONTROLADA: Romper el ciclo al encontrar 1 oferta para ahorrar cuota
-                console.log(`🛑 Prueba controlada: Se encontró 1 oferta exitosamente. Deteniendo el autómata para ahorrar cuota.`);
-                break;
             } catch (error) {
                 console.error(`❌ Error procesando la oferta ${job.job_title}:`, error.message);
-                // No lo marcamos como visto, para que lo intente de nuevo en la siguiente ejecución
             }
 
-            // Pequeña pausa para no saturar APIs
             await new Promise(r => setTimeout(r, 2000));
         }
-
-        // Romper también el ciclo de locaciones si ya encontramos 1 en la prueba
-        if (newJobsFound >= 1) break;
     }
 
     saveSeenJobs(seenJobs);
