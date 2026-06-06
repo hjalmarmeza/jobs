@@ -1,26 +1,42 @@
-# Hjalmar Meza
-**Operations Manager & Digital Transformation Specialist**
+# Hjalmar Meza Cortez
+**Líder de Operaciones & Transformación Digital | Estratega en Automatización e IA**
 
 ## Perfil Ejecutivo
-Líder de Operaciones con sólida experiencia en SaaS, Telecomunicaciones, y Servicios Empresariales. Especializado en el diseño e implementación de estrategias de Customer Success, Service Delivery y Mejora Continua. Apasionado por la optimización de procesos (Operational Excellence) mediante la transformación digital, automatización de flujos de trabajo e Inteligencia Artificial. Enfoque riguroso en el cumplimiento de KPIs, SLAs y en la maximización de la Calidad Operativa para garantizar experiencias excepcionales al cliente (Customer Experience).
+Líder de Operaciones con 18 años de trayectoria en el sector Telecomunicaciones, especializado en la transformación digital de canales de atención masiva y la optimización de la Experiencia del Cliente (CX). Experto en orquestar equipos de alto rendimiento y liderar la transición de entornos físicos a digitales, logrando eficiencias operativas demostradas. Actualmente, fusiono mi sólido background corporativo con la implementación estratégica de Inteligencia Artificial Generativa y automatización de procesos para escalar la rentabilidad empresarial.
 
-## Habilidades Clave
-- Gestión de Operaciones & Service Delivery
-- Transformación Digital & Automatización (IA)
-- Customer Experience (CX) & Customer Success (CS)
-- Mejora Continua & Operational Excellence
-- Definición, seguimiento y optimización de KPIs y SLAs
-- Liderazgo y Gestión de Equipos de Alto Rendimiento
+## Habilidades Clave y Ecosistema Tech
+- **Liderazgo Organizacional:** Transformación Digital, Dirección de Equipos (52 tiendas), Culturas de Alto Desempeño, Resolución de Problemas.
+- **Gestión de Operaciones:** Rentabilidad de Negocios, Optimización de KPIs, Gestión de Proyectos, Agilidad Estratégica.
+- **Transformación & IA:** IA Generativa & Agentes (Gemini, Claude, ChatGPT), Ingeniería de Prompts, Productividad con IA.
+- **Ecosistema Tech:** Azure AI, Make.com, Firebase, Serverless, OCR / MLLM.
 
-## Experiencia Profesional (Resumen Cuantitativo)
-- **Sector Telco / Retail:** Liderazgo de Operaciones con 18 años de experiencia.
-- **Gestión de Infraestructura:** Dirección operativa de 52 tiendas simultáneamente.
-- **Transformación Digital:** Liderazgo en proyectos de migración masiva de clientes (20M+ usuarios migrados).
-- **Eficiencia Financiera:** Generación de ahorros operativos comprobables de 110K € mediante modernización de procesos.
-- **Organizaciones Anteriores:** Experiencia en empresas de primer nivel como Telefónica.
+## Experiencia Profesional & Legado
+- **Gestor de Negocio Familiar & Consultor IA (2021 - Actualidad):** Dirección integral de negocio familiar. Implementación estratégica de herramientas de IA Generativa para rentabilidad y eficiencia de procesos.
+- **Supervisor de Operaciones, Telefónica (2021):** Dirección de 48 gestores de Call Center. Optimización de KPIs críticos elevando productividad mediante coaching.
+- **Supervisor de Control de Calidad, Telefónica (2017 - 2021):** Estabilización de sistemas para migración masiva y exitosa de más de 20 MILLONES de clientes. Testing y mitigación de riesgos.
+- **Supervisor Regional (Norte, Centro y Oriente), Telefónica (2009 - 2017):** Dirección de 52 Centros de Atención gestionando ~160.000 clientes mensuales. Ahorro de 110.000 € liderando proyecto de remodelación integral.
 
-## Certificaciones y Formación Continua
-- **IA & Estrategia Digital:** Ingeniería de Prompts, Estrategia de IA Generativa, Productividad con Agentes de IA (Microsoft / LinkedIn).
-- **Transformación & CX:** Estrategia de Experiencia del Cliente, NPS y Lealtad del Cliente, Experiencia Omnicanal, Pensamiento Estratégico.
-- **Liderazgo Exponencial:** Culturas de Alto Rendimiento, Gestión del Cambio, Inteligencia Emocional, Coaching Directivo.
-- **Gestión & Compliance:** Experto en RGPD (UE), Gestión Ágil, Design Thinking, Mitigación de Riesgos.
+## Logros Corporativos
+- **Migración Masiva 20M:** Estabilización de sistemas críticos en el hito más grande de Telefónica Perú.
+- **Gestión Senior Multi-Sede:** Dirección de 52 centros de atención a nivel nacional.
+- **Eficiencia de Reducción (15%):** Virtualización exitosa de la atención física a canales digitales.
+- **Ahorro OPEX (110K €):** Optimización mediante remodelación estratégica de infraestructura.
+
+## Portafolio de Innovación Tecnológica (Desarrollo & IA)
+Desarrollo de una arquitectura de software diversificada con más de 25 proyectos integrales:
+- **Logística y Entregas Rápidas:** Arquitecturas de comercio digital y reservas (Alacena) alojadas en Firebase.
+- **Sistemas de Gestión Comercial:** Bases de datos serverless (Kopilot) y gestión de restaurantes (Restaurante360).
+- **Telemetría y Operaciones GEO:** Radares geolocalizados para control y prevención (Alerta Vecinal).
+- **Minería de Datos y Autopilotos:** Agentes de extracción y OCR (OptiCompra, Scripto).
+- **Interfaces de Teleoperación:** Sistemas de reconocimiento gestual (HandRacer).
+- **Procesadores Lingüísticos:** Interacciones avanzadas conectadas a análisis analítico.
+- **Automatización de Contenido & IA:** Motores de procesamiento multimedia (MusiChris Atmos).
+- **Ingeniería de Voz y Comunicaciones:** Traducción fluida y baja latencia (Talk.Me).
+- **Agentes Inteligentes de Monitoreo:** Bots asíncronos para detección en Real Estate y Finanzas (Vigilante AI).
+- **Sistemas de Mando & Telemetría:** Arquitecturas conversacionales de ultra-rápida acción (Sentry Mezabot).
+
+## Formación y Top Certificaciones
+- **Grado en Administración:** Univ. César Vallejo (2011 - 2014)
+- **Top Certificaciones en IA:** IA Generativa (Microsoft/LinkedIn), Productividad IA, Azure AI Studio.
+- **Certificaciones Directivas:** Liderazgo en la Era Digital (Tec. de Monterrey), CX Strategy, Experto RGPD (UE), Agile & Design Thinking.
+- **Coaching & Logro:** Coaching Directivo (CENTRUM PUCP), Gestión del Logro.

@@ -33,10 +33,13 @@ Tu respuesta DEBE estructurarse exactamente así:
 [Mantener los 4 logros reales: Migración 20M, Eficiencia 15%, Gestión Senior 52 sedes, Ahorro 110K]
 
 ## COMPETENCIAS & ECOSISTEMA TECH
-[Listar solo las que el candidato posee y aplican a la oferta]
+[Listar las competencias que el candidato posee. Priorizar las que aplican a la oferta, pero NO omitir el Ecosistema Tech]
+
+## PORTAFOLIO DE INNOVACIÓN TECNOLÓGICA (DESARROLLO & IA)
+[Listar SIEMPRE los proyectos de innovación del candidato (Firebase, Automatización, IA, Telemetría, etc.). Resaltar los que más conecten con la oferta para demostrar valor diferencial]
 
 ## FORMACIÓN & CERTIFICACIONES
-[Mantener los grados y certificaciones reales (Administración, IA, Azure, etc.). NO INVENTAR NADA]
+[Mantener SIEMPRE todos los grados y certificaciones reales (Administración, IA, Azure, Liderazgo, etc.). NO INVENTAR NADA y NO OMITIR NADA]
 
 REGLA 3: FORMATO LIMPIO.
 - NO uses bloques de código markdown (\`\`\`markdown). Devuelve el texto directamente.
