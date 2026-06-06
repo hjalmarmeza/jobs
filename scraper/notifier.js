@@ -26,16 +26,21 @@ async function sendDailyDigest(analyzedJobs) {
         const analysis = item.analysis;
         const cleanAnalysis = analysis.replace(/```markdown/gi, '').replace(/```/g, '').replace(/\*\*/g, '').replace(/^#+\s/gm, '');
 
-        // Extraer el porcentaje de match con Regex
+        // Extraer el porcentaje de match y el salario con Regex
         const matchRegex = /NIVEL DE MATCH:\s*(\d+%?)/i;
         const matchResult = cleanAnalysis.match(matchRegex);
         const matchPercentage = matchResult ? matchResult[1] : 'N/A';
+
+        const salaryRegex = /SALARIO:\s*(.*)/i;
+        const salaryResult = cleanAnalysis.match(salaryRegex);
+        const salaryText = salaryResult ? salaryResult[1].trim() : 'No especificado';
 
         // Agregar fila a la tabla resumen
         tableRowsHtml += `
             <tr style="border-bottom: 1px solid #e2e8f0;">
                 <td style="padding: 12px; color: #1e293b; font-size: 14px;"><strong>${job.job_title}</strong><br><span style="color: #64748b; font-size: 12px;">${job.employer_name}</span></td>
                 <td style="padding: 12px; text-align: center; color: #3b82f6; font-weight: bold; font-size: 14px;">${matchPercentage}</td>
+                <td style="padding: 12px; text-align: right; color: #10b981; font-weight: 500; font-size: 13px;">${salaryText}</td>
             </tr>
         `;
 
@@ -68,6 +73,7 @@ ${cleanAnalysis}
                     <tr style="background-color: #f1f5f9; text-align: left;">
                         <th style="padding: 12px; font-size: 13px; color: #64748b; text-transform: uppercase;">Puesto & Empresa</th>
                         <th style="padding: 12px; font-size: 13px; color: #64748b; text-transform: uppercase; text-align: center;">Nivel de Match</th>
+                        <th style="padding: 12px; font-size: 13px; color: #64748b; text-transform: uppercase; text-align: right;">Salario</th>
                     </tr>
                 </thead>
                 <tbody>

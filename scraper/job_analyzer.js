@@ -16,6 +16,8 @@ RESUMEN DEL PUESTO:
 [Un resumen ejecutivo de máximo 3 líneas sobre el core del puesto y lo que la empresa realmente busca]
 
 NIVEL DE MATCH: [X]%
+SALARIO: [Extraer el rango salarial si se menciona, sino "No especificado"]
+BENEFICIOS: [Resumir en 1 línea los beneficios clave si se mencionan, sino "No especificados"]
 
 PUNTOS A FAVOR:
 - [Punto 1 conectando la experiencia real del candidato con la vacante]
