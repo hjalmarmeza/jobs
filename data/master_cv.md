@@ -46,6 +46,7 @@ Desarrollo de una arquitectura de software diversificada con más de 25 proyecto
 
 ## STACK TECNOLÓGICO OPERATIVO (HERRAMIENTAS CLAVE)
 - **Gestión Corporativa & ERP:** SAP (Módulo de Operaciones).
+- **Customer Experience & Flujo de Clientes:** Qmatic, Bmatic (Gestión de sucursales y atención al cliente).
 - **Análisis de Datos & KPIs:** Microsoft Excel Avanzado (Dashboards y Reportes), Modelado de Bases de Datos.
 - **Productividad & Ecosistema Cloud:** Google Workspace (Drive, Sheets), Microsoft Teams.
 - **Comunicación Directiva:** Microsoft PowerPoint (Presentaciones Ejecutivas y de Alto Impacto).
