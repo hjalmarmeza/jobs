@@ -1,0 +1,40 @@
+name: JobSeeker AI Automata
+
+on:
+  schedule:
+    # Corre dos veces al día (9:00 AM y 4:00 PM UTC)
+    - cron: '0 9,16 * * *'
+  workflow_dispatch: # Permite ejecución manual desde GitHub
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Instalar Dependencias
+      run: npm install
+
+    - name: Ejecutar Autómata (JobSeeker AI)
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+        EMAIL_DESTINATION: ${{ secrets.EMAIL_DESTINATION }}
+      run: node index.js
+
+    - name: Guardar Memoria (seen_jobs.json)
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Bot"
+        git add data/seen_jobs.json
+        git commit -m "🤖 [JobSeeker AI] Memoria actualizada con nuevas ofertas" || exit 0
+        git push
