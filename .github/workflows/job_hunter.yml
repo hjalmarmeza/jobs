@@ -2,8 +2,8 @@ name: JobSeeker AI Automata
 
 on:
   schedule:
-    # Corre dos veces al día (9:00 AM y 4:00 PM UTC)
-    - cron: '0 9,16 * * *'
+    # Se ejecuta todos los días a las 08:00 UTC (10:00 AM Hora de España)
+    - cron: '0 8 * * *'
   workflow_dispatch: # Permite ejecución manual desde GitHub
 
 jobs:
