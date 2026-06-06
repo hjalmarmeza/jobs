@@ -62,12 +62,13 @@ async function runJobHunter() {
     // (En producción real, se pueden unificar o espaciar para no golpear el rate limit)
     // Para simplificar, tomaremos un query representativo combinado o iteraremos.
     
-    // Unificamos queries para JSearch de forma más amplia.
-    const queryStr = 'Operations Manager OR Director de Operaciones OR Area Manager';
+    // Unificamos queries para JSearch de forma más amplia y simple.
+    const queryStr = 'Operations Manager';
 
     for (const location of LOCATIONS) {
         console.log(`🔍 Buscando en: ${location}...`);
         const jobs = await searchJobs(queryStr, location);
+        console.log(`Encontrados ${jobs.length} trabajos crudos en la API.`);
         
         for (const job of jobs) {
             // Generar una llave compuesta para evitar duplicados multi-plataforma (ej. misma oferta en LinkedIn e InfoJobs)

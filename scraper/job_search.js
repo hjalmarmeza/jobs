@@ -23,7 +23,7 @@ async function searchJobs(query, location) {
             query: `${query} in ${location}`,
             page: '1',
             num_pages: '1', // Start with 1 page to save API quota
-            date_posted: 'month' // Extraemos el último mes, y nuestro código local descartará los que superen los 10 días
+            date_posted: 'all' // Traemos todas las fechas posibles para la prueba
         },
         headers: {
             'X-RapidAPI-Key': rapidApiKey,
