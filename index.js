@@ -61,8 +61,8 @@ async function runJobHunter() {
     // (En producción real, se pueden unificar o espaciar para no golpear el rate limit)
     // Para simplificar, tomaremos un query representativo combinado o iteraremos.
     
-    // Unificamos queries para JSearch si es posible, o usamos el primero para la prueba.
-    const queryStr = '"Operations Manager" OR "Business Operations Manager" OR "Service Delivery Manager"';
+    // Unificamos queries para JSearch de forma más amplia.
+    const queryStr = 'Operations Manager OR Director de Operaciones OR Area Manager';
 
     for (const location of LOCATIONS) {
         console.log(`🔍 Buscando en: ${location}...`);
