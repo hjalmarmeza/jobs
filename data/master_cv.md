@@ -52,3 +52,8 @@ Desarrollo de una arquitectura de software diversificada con más de 25 proyecto
 - **Productividad & Ecosistema Cloud:** Google Workspace (Drive, Sheets), Microsoft Teams.
 - **Comunicación Directiva:** Microsoft PowerPoint (Presentaciones Ejecutivas y de Alto Impacto).
 - **Gestión Ágil de Proyectos:** Trello.
+
+## KPIs & MÉTRICAS DE NEGOCIO DOMINADAS
+- **Calidad y Experiencia de Cliente (CX):** IRP (Índice de Resolución de Problemas / First Contact Resolution), NPS (Net Promoter Score), CSAT (Customer Satisfaction).
+- **Desempeño Comercial y Retail:** Tasa de Convertibilidad (Conversión de tráfico a ventas), Venta Cruzada (Cross-Selling), Venta Adicional (Up-Selling), Ticket Promedio.
+- **Eficiencia Operativa:** Productividad por Asesor/Tienda, Optimización de Tiempos de Espera (SLA), Tasa de Retención de Clientes (Churn Rate).
