@@ -26,8 +26,7 @@ const SEARCH_QUERIES = [
 
 const LOCATIONS = [
     "Salamanca, Spain", // Restringido solo a la localidad (nada de toda Castilla y León para evitar viajes > 10 mins)
-    "Remote Spain",
-    "Madrid, Spain" // TEMPORAL: Para forzar una prueba exitosa y demostrar que el correo funciona
+    "Remote Spain"
 ];
 
 // Función para cargar los trabajos ya vistos
