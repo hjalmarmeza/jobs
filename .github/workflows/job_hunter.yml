@@ -7,8 +7,10 @@ on:
   workflow_dispatch: # Permite ejecución manual desde GitHub
 
 jobs:
-  hunt:
+  job_seeker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout del repositorio
