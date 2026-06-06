@@ -48,7 +48,7 @@ async function sendAlert(job, adaptedCV) {
                 <h3 style="margin: 0 0 15px 0; font-size: 16px; color: #0f172a; text-transform: uppercase; letter-spacing: 1px;">Curriculum Vitae Adaptado</h3>
                 <p style="margin: 0 0 20px 0; font-size: 14px; color: #64748b;">El siguiente perfil ha sido optimizado con IA para coincidir estrictamente con los requerimientos técnicos de esta posición:</p>
                 
-                <div style="background-color: #1e293b; color: #f8fafc; padding: 25px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 1.6; overflow-x: auto;">
+                <div style="background-color: #1e293b; color: #f8fafc; padding: 25px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 1.6; overflow-x: auto; white-space: pre-wrap;">
 ${adaptedCV}
                 </div>
             </div>
