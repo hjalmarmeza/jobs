@@ -26,7 +26,8 @@ const SEARCH_QUERIES = [
 
 const LOCATIONS = [
     "Salamanca, España", 
-    "Remoto España"
+    "Remoto España",
+    "Madrid, España" // MODO PRUEBA
 ];
 
 // Función para cargar los trabajos ya vistos
@@ -124,12 +125,18 @@ async function runJobHunter() {
                     seenJobs.push(compositeKey);
                 }
                 newJobsFound++;
+
+                // MODO PRUEBA: Freno de emergencia
+                console.log(`🛑 Prueba controlada: Se encontró 1 oferta exitosamente. Deteniendo el autómata.`);
+                break;
             } catch (error) {
                 console.error(`❌ Error procesando la oferta ${job.job_title}:`, error.message);
             }
 
             await new Promise(r => setTimeout(r, 2000));
         }
+        
+        if (newJobsFound >= 1) break; // MODO PRUEBA
     }
 
     saveSeenJobs(seenJobs);
