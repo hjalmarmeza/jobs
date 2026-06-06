@@ -4,11 +4,14 @@
 ## Perfil Ejecutivo
 Líder de Operaciones con 18 años de trayectoria en el sector Telecomunicaciones, especializado en la transformación digital de canales de atención masiva y la optimización de la Experiencia del Cliente (CX). Experto en orquestar equipos de alto rendimiento y liderar la transición de entornos físicos a digitales, logrando eficiencias operativas demostradas. Actualmente, fusiono mi sólido background corporativo con la implementación estratégica de Inteligencia Artificial Generativa y automatización de procesos para escalar la rentabilidad empresarial.
 
-## Habilidades Clave y Ecosistema Tech
-- **Liderazgo Organizacional:** Transformación Digital, Dirección de Equipos (52 tiendas), Culturas de Alto Desempeño, Resolución de Problemas.
-- **Gestión de Operaciones:** Rentabilidad de Negocios, Optimización de KPIs, Gestión de Proyectos, Agilidad Estratégica.
-- **Transformación & IA:** IA Generativa & Agentes (Gemini, Claude, ChatGPT), Ingeniería de Prompts, Productividad con IA.
-- **Ecosistema Tech:** Azure AI, Make.com, Firebase, Serverless, OCR / MLLM.
+## Competencias & Aptitudes (Áreas de Dominio Técnico y Operativo)
+- **Liderazgo Organizacional:** Liderazgo Transformador, Dirección de Equipos (52 tiendas), Culturas de Alto Desempeño, Resolución de Problemas, Toma de Decisiones, Conflictología.
+- **Transformación & IA:** Transformación Digital, IA Generativa & Agentes (Gemini, Claude, ChatGPT), Ingeniería de Prompts, Ecosistemas Cloud (Azure), Análisis y Decisión Técnica, Productividad de IA.
+- **Gestión de Operaciones:** Rentabilidad de Negocios, Optimización de KPIs, Mitigación de Riesgos, Gestión de Proyectos, Coordinación Logística, Agilidad Estratégica.
+- **Desarrollo Comercial:** Estrategia Comercial, Negociación, Prospección de Ventas, Marketing Digital, Eficacia de Ventas, Análisis de Tendencias.
+- **Experiencia del Cliente (CX):** Satisfacción del Cliente, Relaciones CRM, Gestión de Conflictos, Comunicación Profesional, Atención al Cliente, Empatía.
+- **Habilidades Humanas:** Inteligencia Emocional, Pensamiento Crítico, Creatividad e Innovación, Comunicación Interpersonal, Gestión del Tiempo, Adaptabilidad.
+- **Ecosistema Tech:** Make.com, Firebase, Serverless, OCR / MLLM, Agile Management.
 
 ## Experiencia Profesional & Legado
 - **Gestor de Negocio Familiar & Consultor IA (2021 - Actualidad):** Dirección integral de negocio familiar. Implementación estratégica de herramientas de IA Generativa para rentabilidad y eficiencia de procesos.

@@ -32,8 +32,8 @@ Tu respuesta DEBE estructurarse exactamente así:
 ## LOGROS CORPORATIVOS
 [Mantener los 4 logros reales: Migración 20M, Eficiencia 15%, Gestión Senior 52 sedes, Ahorro 110K]
 
-## COMPETENCIAS & ECOSISTEMA TECH
-[Listar las competencias que el candidato posee. Priorizar las que aplican a la oferta, pero NO omitir el Ecosistema Tech]
+## COMPETENCIAS & APTITUDES (ÁREAS DE DOMINIO TÉCNICO Y OPERATIVO)
+[Mantener TODAS las categorías de habilidades del CV original (Liderazgo, Transformación & IA, Operaciones, Comercial, CX, Humanas, Ecosistema Tech). Resaltar en negrita las más relevantes para la oferta, pero NO ELIMINAR NINGUNA categoría.]
 
 ## PORTAFOLIO DE INNOVACIÓN TECNOLÓGICA (DESARROLLO & IA)
 [Listar SIEMPRE los proyectos de innovación del candidato (Firebase, Automatización, IA, Telemetría, etc.). Resaltar los que más conecten con la oferta para demostrar valor diferencial]
