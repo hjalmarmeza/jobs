@@ -15,9 +15,15 @@ Líder de Operaciones con 18 años de trayectoria en el sector Telecomunicacione
 
 ## Experiencia Profesional & Legado
 - **Gestor de Negocio Familiar & Consultor IA (2021 - Actualidad):** Dirección integral de operaciones. Implementación de herramientas de IA Generativa orientadas a la mejora de la eficiencia en procesos operativos.
+  - *Entorno Tecnológico:* Google Workspace, Trello, Make.com, Herramientas de IA Generativa.
 - **Supervisor de Operaciones, Telefónica (2021):** Dirección de un equipo de 48 gestores. Orientación hacia la optimización de KPIs de calidad y productividad mediante acompañamiento y coaching.
+  - *KPIs Gestionados:* NPS, IRP (Resolución de Problemas), Churn Rate, ARPU.
+  - *Entorno Tecnológico:* Amdocs, ISC, SAP, Microsoft Teams.
 - **Supervisor de Control de Calidad, Telefónica (2017 - 2021):** Participación en el proyecto de estabilización de sistemas para la migración de cartera (20M de clientes). Gestión del testing y mitigación de riesgos operativos.
+  - *Herramientas:* SAP, Excel Avanzado (Modelado y Reportes), Bases de Datos.
 - **Supervisor Regional (Norte, Centro y Oriente), Telefónica (2009 - 2017):** Dirección operativa de 52 Centros de Atención (160.000 clientes/mes). Ejecución de proyecto de remodelación de infraestructura generando un ahorro documentado de 110K €.
+  - *Métricas de Retail y Sucursales:* Tráfico de Tienda (Footfall), Tasa de Convertibilidad, Venta Cruzada, TMO, TME, Tasa de Abandono.
+  - *Entorno Tecnológico:* Qmatic, Bmatic (Flujo de Clientes), Amdocs, SAP.
 
 ## Logros Corporativos
 - **Proyecto de Migración (20M):** Participación en la estabilización de sistemas y mitigación de riesgos durante el proceso de migración de clientes.
@@ -43,18 +49,3 @@ Desarrollo de una arquitectura de software diversificada con más de 25 proyecto
 - **Top Certificaciones en IA:** IA Generativa (Microsoft/LinkedIn), Productividad IA, Azure AI Studio.
 - **Certificaciones Directivas:** Liderazgo en la Era Digital (Tec. de Monterrey), CX Strategy, Experto RGPD (UE), Agile & Design Thinking.
 - **Coaching & Logro:** Coaching Directivo (CENTRUM PUCP), Gestión del Logro.
-
-## STACK TECNOLÓGICO OPERATIVO (HERRAMIENTAS CLAVE)
-- **Gestión Corporativa & ERP:** SAP (Módulo de Operaciones).
-- **Sistemas Core Telco & CRM:** Amdocs (Gestión y Atención al Cliente), ISC (Interfaz de Sistemas Comerciales / Telco).
-- **Customer Experience & Flujo de Clientes:** Qmatic, Bmatic (Gestión de sucursales y atención al cliente).
-- **Análisis de Datos & KPIs:** Microsoft Excel Avanzado (Dashboards y Reportes), Modelado de Bases de Datos.
-- **Productividad & Ecosistema Cloud:** Google Workspace (Drive, Sheets), Microsoft Teams.
-- **Comunicación Directiva:** Microsoft PowerPoint (Presentaciones Ejecutivas y de Alto Impacto).
-- **Gestión Ágil de Proyectos:** Trello.
-
-## KPIs & MÉTRICAS DE NEGOCIO DOMINADAS
-- **Calidad y Experiencia de Cliente (CX):** IRP (Resolución de Problemas), NPS (Net Promoter Score), TMO (Tiempo Medio de Operación), TME (Tiempo Medio de Espera), Tasa de Abandono en sucursales.
-- **Desempeño Comercial (Retail):** Cumplimiento de Cuota (Forecast / Target de Ventas), Tráfico de Tienda (Footfall), Tasa de Convertibilidad, Venta Cruzada (Cross-Selling).
-- **Retención y Rentabilidad (Core Telco):** Churn Rate (Control de bajas/cancelaciones), ARPU (Ingreso Promedio por Usuario), Retención Proactiva y Reactiva.
-- **Eficiencia Operativa:** Productividad por Asesor/Tienda, Optimización de SLA y tiempos de atención.
