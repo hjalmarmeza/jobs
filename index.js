@@ -94,7 +94,8 @@ async function runJobHunter() {
             
             // 1. Debe ser un rol de liderazgo o estar en los sectores clave
             const executiveKeywords = [
-                "operations manager", "director", "head of", "customer success", "gerente", "jefe", "líder", "leader", "manager",
+                "operations manager", "director", "head of", "customer success", "gerente", "jefe", "jefatura", "líder", "leader", "manager",
+                "supervisor", "supervisión", "coordinador", "responsable",
                 "service delivery", "digital transformation", "transformación digital",
                 "saas", "retail", "telecomunicaciones", "telco", "bpo", "tecnología", "cx"
             ];
