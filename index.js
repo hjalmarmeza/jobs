@@ -132,17 +132,26 @@ async function runJobHunter() {
                 // Análisis INDIVIDUAL para este puesto específico
                 const jobAnalysis = await analyzeJob(job.job_description, masterCV);
 
-                // Guardamos el trabajo y su análisis en la bolsa del día
-                dailyDigestJobs.push({
-                    job: job,
-                    analysis: jobAnalysis
-                });
+                // Extraer el porcentaje de la respuesta de la IA
+                const matchRegex = jobAnalysis.match(/NIVEL DE MATCH:\s*(\d+)%/i);
+                const matchPercentage = matchRegex ? parseInt(matchRegex[1], 10) : 100; // Si falla la lectura, por seguridad lo dejamos pasar
+
+                if (matchPercentage >= 70) {
+                    // Guardamos el trabajo y su análisis en la bolsa del día
+                    dailyDigestJobs.push({
+                        job: job,
+                        analysis: jobAnalysis
+                    });
+                    newJobsFound++;
+                    console.log(`✅ Aprobada para envío (Match: ${matchPercentage}%)`);
+                } else {
+                    console.log(`🗑️ Descartando oferta por bajo match: ${matchPercentage}%`);
+                }
 
                 seenJobs.push(job.job_id);
                 if (!seenJobs.includes(compositeKey)) {
                     seenJobs.push(compositeKey);
                 }
-                newJobsFound++;
 
             } catch (error) {
                 console.error(`❌ Error procesando la oferta ${job.job_title}:`, error.message);
