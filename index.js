@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { searchJobs } = require('./scraper/job_search');
+const { searchBruntworkJobs } = require('./scraper/bruntwork_search');
 const { analyzeJob } = require('./scraper/job_analyzer');
 const { sendDailyDigest } = require('./scraper/notifier');
 
@@ -63,12 +64,22 @@ async function runJobHunter() {
     // Buscamos con términos más amplios en la API para no perder sinónimos
     const queryStr = 'Operaciones OR Operations OR Customer Success';
 
+    // Recopilar todos los trabajos en un solo array
+    let allRawJobs = [];
+
     for (const location of LOCATIONS) {
         console.log(`🔍 Buscando en: ${location}...`);
         const jobs = await searchJobs(queryStr, location);
-        console.log(`Encontrados ${jobs.length} trabajos crudos en la API.`);
+        console.log(`Encontrados ${jobs.length} trabajos crudos en la API para ${location}.`);
+        allRawJobs = allRawJobs.concat(jobs);
+    }
+
+    // Agregar BruntWork
+    const bwJobs = await searchBruntworkJobs();
+    console.log(`Encontrados ${bwJobs.length} trabajos crudos en BruntWork.`);
+    allRawJobs = allRawJobs.concat(bwJobs);
         
-        for (const job of jobs) {
+    for (const job of allRawJobs) {
             const employerNorm = (job.employer_name || "unknown").toLowerCase().trim();
             const titleNorm = (job.job_title || "unknown").toLowerCase().trim();
             const compositeKey = `${employerNorm}_${titleNorm}`;
