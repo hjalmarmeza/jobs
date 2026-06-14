@@ -150,7 +150,6 @@ async function runJobHunter() {
 
             await new Promise(r => setTimeout(r, 2000));
         }
-    }
 
     saveSeenJobs(seenJobs);
     console.log(`🏁 Búsqueda terminada. Ofertas nuevas procesadas: ${newJobsFound}`);
